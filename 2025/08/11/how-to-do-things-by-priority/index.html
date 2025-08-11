@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>做事情的优先级 | codelife个人记录</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="今天在工作中遇到开发提了好几个需求, 搭建一个snail-job, 部署2个服务上去, 其中一个依赖snail-job. deploy一个框架服务到nexus的job.好的, 看起来这些需求优先级最高的应该就是snail-job了. 虽然之前从来没接触过. 看了开发法的官方文档,如果是直接部署的话, 还是很简单的, 创建数据库,初始化, 传入参数启动即可. 但是我还是想了解下这个产品, 因为开发说">
+<meta property="og:type" content="article">
+<meta property="og:title" content="做事情的优先级">
+<meta property="og:url" content="http://codelife.github.io/2025/08/11/how-to-do-things-by-priority/index.html">
+<meta property="og:site_name" content="codelife个人记录">
+<meta property="og:description" content="今天在工作中遇到开发提了好几个需求, 搭建一个snail-job, 部署2个服务上去, 其中一个依赖snail-job. deploy一个框架服务到nexus的job.好的, 看起来这些需求优先级最高的应该就是snail-job了. 虽然之前从来没接触过. 看了开发法的官方文档,如果是直接部署的话, 还是很简单的, 创建数据库,初始化, 传入参数启动即可. 但是我还是想了解下这个产品, 因为开发说">
+<meta property="og:locale">
+<meta property="article:published_time" content="2025-08-11T15:53:18.000Z">
+<meta property="article:modified_time" content="2025-08-11T16:43:23.518Z">
+<meta property="article:author" content="codelife">
+<meta property="article:tag" content="效率">
+<meta property="article:tag" content="工作">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="codelife个人记录" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">codelife个人记录</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">对自己真实,真诚</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://codelife.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-how-to-do-things-by-priority" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/08/11/how-to-do-things-by-priority/" class="article-date">
+  <time class="dt-published" datetime="2025-08-11T15:53:18.000Z" itemprop="datePublished">2025-08-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      做事情的优先级
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>今天在工作中遇到开发提了好几个需求, 搭建一个snail-job, 部署2个服务上去, 其中一个依赖snail-job. deploy一个框架服务到nexus的job.<br>好的, 看起来这些需求优先级最高的应该就是snail-job了. 虽然之前从来没接触过. 看了开发法的官方文档,如果是直接部署的话, 还是很简单的, 创建数据库,初始化, 传入参数启动即可.<br></p>
+<p>但是我还是想了解下这个产品, 因为开发说以后会和apollo一样, 一个平台管理3个环境的样子. 并没有马上部署.我就在慢慢的看snail-job的文档了. <br><br>刚好开发遇到一个问题, 调整了底层的框架. 在服务没有变更的时候需要重新打包,部署. 由于之前一直用webhook, 其实我手动触发下.当时就可以临时解决使用的问题. <br><br>经过和开发的讨论, 他想新建一个jenkins任务来自己触发. 之前的通用jenkins任务.没有参数化. 需要传入项目名称, 分支, 环境等参数. <br><br>我就开始找怎么做参数化. 发现jenkins的参数化任务, 要传入的参数过多,导致开发使用不方便. <br><br>又开始找其他更好的方案, 其实到现在你会发现这个会花费大量的时间,其实手动触发当时就可以发布了或者他提一个空的push请求触发webhook.都是可以的. 但是我还是想找一个更好的方案. <br><br>但是我还是切到了这个上面,导致进度拖延, 开发后来问我snail-job搭建的怎么样了. 我又有点尴尬,又有点着急了.优先级任务的不清晰, 导致别人看我的工作效率低下.</p>
+<p>开发手动触发构建这件事很重要,影响深远.需要好好规划,需要花时间研究方案. 优先级不高<br>搭建snail-job 反而是重要紧急的, 是卡点.这个不完成,后续的任务都会被阻塞. <br></p>
+<p>着手做手动建构的任务时其实我也是无法用心做好的,因为还有更紧急的事等着做. 也是无法用心做好的,因为还有更紧急的事等着做.<br>这种无优先级概念,让我自己感觉非常的忙和着急 但短期结果没有,长期结果现在看不到作用. 重要的事如果因为其他紧急任务得不到长时间的思考和解决,仓促的去做, 可能会导致后续的问题. <br></p>
+<p>所以后续可以接任务,而且做运维的会不停的被打断有新的任务. 每次脑子里都需要一个概念, 任务来了. 要先评估优先级并且和对方同步你的想法. 让对方理解你为什么要先做这个,而不是那个. <br></p>
+<p>也不要因为有些任务简单,就去做. 可能会导致重要的事情被耽误. <br></p>
+<p>有些任务可以先解决,后续再去完善去改进总结.不必要事事当时完美. <br></p>
+<p>有些任务, 可能会花费大量的时间, 但是是重要的. 需要优先处理. <br></p>
+<p>例如我还想去了解下snail-job, 这个东西后续会用到. 但是我现在没有时间去了解. 只能先搭建起来, 后续有时间再去了解. <br></p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>核心动作</th>
+<th>具体操作方法</th>
+<th>实践要点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>1. 事项分类</strong></td>
+<td>用四象限法划分优先级</td>
+<td>按「价值（高&#x2F;低）」和「成本（高&#x2F;低）」将事项分为4类：<br>① 高价值+低成本 → 立刻做<br>② 高价值+高成本 → 规划后集中做<br>③ 低价值+低成本 → 批量&#x2F;碎片做<br>④ 低价值+高成本 → 拒绝&#x2F;委托</td>
+<td>价值判断标准：是否贴近「近期核心目标」（如本周&#x2F;本月目标）；成本&#x3D;时间+精力</td>
+</tr>
+<tr>
+<td><strong>2. 每日聚焦</strong></td>
+<td>确定「必做3件事」</td>
+<td>每天早&#x2F;晚列出3件「高价值核心事」（用红笔标注），完成后打勾，未完成移至次日。</td>
+<td>3件事需具体可落地（如「写方案初稿」而非「做方案」）</td>
+</tr>
+<tr>
+<td><strong>3. 时间绑定</strong></td>
+<td>时间块+优先级匹配</td>
+<td>将一天划分为「精力时段」：<br>→ 高效时段（如9:00-11:00）：做高价值+高成本事项<br>→ 低效时段（如15:00后）：做低价值+低成本事项<br>预留20%空白时间应对突发情况</td>
+<td>避免时间块过满，单次专注1-2件事</td>
+</tr>
+<tr>
+<td><strong>4. 琐事处理</strong></td>
+<td>执行「两分钟法则」</td>
+<td>遇到2分钟内可完成的琐事（如短消息回复、文件归档），立即处理，不拖延。</td>
+<td>避免琐事堆积占用注意力（如「等会儿做」会消耗心理能量）</td>
+</tr>
+<tr>
+<td><strong>5. 复盘优化</strong></td>
+<td>每日5分钟优先级复盘</td>
+<td>回答3个问题：<br>① 今日核心事是否完成？未完成原因？<br>② 有无可拒绝的低价值事？<br>③ 明日核心事是什么？需提前准备什么？</td>
+<td>重点调整「优先级误判」和「被干扰」问题，逐步优化判断标准</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://codelife.github.io/2025/08/11/how-to-do-things-by-priority/" data-id="cme7cg8bn00003u7kddij8mok" data-title="做事情的优先级" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%A5%E4%BD%9C/" rel="tag">工作</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%88%E7%8E%87/" rel="tag">效率</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2025/08/04/how-to-learn-fast/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">如何快速上手新技能</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E4%BD%9C/" rel="tag">工作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E8%83%BD/" rel="tag">技能</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8B%96%E5%BB%B6%E7%97%87/" rel="tag">拖延症</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%88%E7%8E%87/" rel="tag">效率</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">学习</a> <a href="/tags/%E5%B7%A5%E4%BD%9C/" style="font-size: 10px;">工作</a> <a href="/tags/%E6%8A%80%E8%83%BD/" style="font-size: 10px;">技能</a> <a href="/tags/%E6%8B%96%E5%BB%B6%E7%97%87/" style="font-size: 10px;">拖延症</a> <a href="/tags/%E6%95%88%E7%8E%87/" style="font-size: 20px;">效率</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/08/">August 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/07/">July 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/08/11/how-to-do-things-by-priority/">做事情的优先级</a>
+          </li>
+        
+          <li>
+            <a href="/2025/08/04/how-to-learn-fast/">如何快速上手新技能</a>
+          </li>
+        
+          <li>
+            <a href="/2025/08/04/open-blog/">开篇blog</a>
+          </li>
+        
+          <li>
+            <a href="/2025/07/31/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 codelife<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
