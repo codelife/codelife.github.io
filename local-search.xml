@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>做事情的优先级</title>
+    <link href="/2025/08/11/how-to-do-things-by-priority/"/>
+    <url>/2025/08/11/how-to-do-things-by-priority/</url>
+    
+    <content type="html"><![CDATA[<p>今天在工作中遇到开发提了好几个需求, 搭建一个snail-job, 部署2个服务上去, 其中一个依赖snail-job. deploy一个框架服务到nexus的job.<br>好的, 看起来这些需求优先级最高的应该就是snail-job了. 虽然之前从来没接触过. 看了开发法的官方文档,如果是直接部署的话, 还是很简单的, 创建数据库,初始化, 传入参数启动即可.<br></p><p>但是我还是想了解下这个产品, 因为开发说以后会和apollo一样, 一个平台管理3个环境的样子. 并没有马上部署.我就在慢慢的看snail-job的文档了. <br><br>刚好开发遇到一个问题, 调整了底层的框架. 在服务没有变更的时候需要重新打包,部署. 由于之前一直用webhook, 其实我手动触发下.当时就可以临时解决使用的问题. <br><br>经过和开发的讨论, 他想新建一个jenkins任务来自己触发. 之前的通用jenkins任务.没有参数化. 需要传入项目名称, 分支, 环境等参数. <br><br>我就开始找怎么做参数化. 发现jenkins的参数化任务, 要传入的参数过多,导致开发使用不方便. <br><br>又开始找其他更好的方案, 其实到现在你会发现这个会花费大量的时间,其实手动触发当时就可以发布了或者他提一个空的push请求触发webhook.都是可以的. 但是我还是想找一个更好的方案. <br><br>但是我还是切到了这个上面,导致进度拖延, 开发后来问我snail-job搭建的怎么样了. 我又有点尴尬,又有点着急了.优先级任务的不清晰, 导致别人看我的工作效率低下.</p><p>开发手动触发构建这件事很重要,影响深远.需要好好规划,需要花时间研究方案. 优先级不高<br>搭建snail-job 反而是重要紧急的, 是卡点.这个不完成,后续的任务都会被阻塞. <br></p><p>着手做手动建构的任务时其实我也是无法用心做好的,因为还有更紧急的事等着做. 也是无法用心做好的,因为还有更紧急的事等着做.<br>这种无优先级概念,让我自己感觉非常的忙和着急 但短期结果没有,长期结果现在看不到作用. 重要的事如果因为其他紧急任务得不到长时间的思考和解决,仓促的去做, 可能会导致后续的问题. <br></p><p>所以后续可以接任务,而且做运维的会不停的被打断有新的任务. 每次脑子里都需要一个概念, 任务来了. 要先评估优先级并且和对方同步你的想法. 让对方理解你为什么要先做这个,而不是那个. <br></p><p>也不要因为有些任务简单,就去做. 可能会导致重要的事情被耽误. <br></p><p>有些任务可以先解决,后续再去完善去改进总结.不必要事事当时完美. <br></p><p>有些任务, 可能会花费大量的时间, 但是是重要的. 需要优先处理. <br></p><p>例如我还想去了解下snail-job, 这个东西后续会用到. 但是我现在没有时间去了解. 只能先搭建起来, 后续有时间再去了解. <br></p><table><thead><tr><th>阶段</th><th>核心动作</th><th>具体操作方法</th><th>实践要点</th></tr></thead><tbody><tr><td><strong>1. 事项分类</strong></td><td>用四象限法划分优先级</td><td>按「价值（高&#x2F;低）」和「成本（高&#x2F;低）」将事项分为4类：<br>① 高价值+低成本 → 立刻做<br>② 高价值+高成本 → 规划后集中做<br>③ 低价值+低成本 → 批量&#x2F;碎片做<br>④ 低价值+高成本 → 拒绝&#x2F;委托</td><td>价值判断标准：是否贴近「近期核心目标」（如本周&#x2F;本月目标）；成本&#x3D;时间+精力</td></tr><tr><td><strong>2. 每日聚焦</strong></td><td>确定「必做3件事」</td><td>每天早&#x2F;晚列出3件「高价值核心事」（用红笔标注），完成后打勾，未完成移至次日。</td><td>3件事需具体可落地（如「写方案初稿」而非「做方案」）</td></tr><tr><td><strong>3. 时间绑定</strong></td><td>时间块+优先级匹配</td><td>将一天划分为「精力时段」：<br>→ 高效时段（如9:00-11:00）：做高价值+高成本事项<br>→ 低效时段（如15:00后）：做低价值+低成本事项<br>预留20%空白时间应对突发情况</td><td>避免时间块过满，单次专注1-2件事</td></tr><tr><td><strong>4. 琐事处理</strong></td><td>执行「两分钟法则」</td><td>遇到2分钟内可完成的琐事（如短消息回复、文件归档），立即处理，不拖延。</td><td>避免琐事堆积占用注意力（如「等会儿做」会消耗心理能量）</td></tr><tr><td><strong>5. 复盘优化</strong></td><td>每日5分钟优先级复盘</td><td>回答3个问题：<br>① 今日核心事是否完成？未完成原因？<br>② 有无可拒绝的低价值事？<br>③ 明日核心事是什么？需提前准备什么？</td><td>重点调整「优先级误判」和「被干扰」问题，逐步优化判断标准</td></tr></tbody></table>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>效率</tag>
+      
+      <tag>工作</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>如何快速上手新技能</title>
+    <link href="/2025/08/04/how-to-learn-fast/"/>
+    <url>/2025/08/04/how-to-learn-fast/</url>
+    
+    <content type="html"><![CDATA[<p>我是看到一个同事的博客,有突然有想法自己也写一个的. 虽然这个想法时不时冒出来.但是从未实践过.<br><br>因为我之前都是把他想的太大了, 太复杂了. 想到要自己买服务器,自己搞个域名,还要搞个精美好用的blog框架, 好看的模版.<br><br>继而衍生出服务器选型,哪个服务商价格合适. 域名哪个好听好记, blog模版哪个好用,再整整模版插件.<br><br>可能这件事进行前两步的时候,我就忘了自己要干啥了.继而研究起其他的了. 而忘了我只是想写点东西而已.</p><p>事实上这只是我做事的一个缩影,很多事做不成的原因就是太追求完美了. 想的太多. 而导致延期或者自己就没有做,更谈不上完美了.</p><p>其实现在我用的框架hexo,也不是我看到那篇&lt;&lt;github pages 写个人博客&gt;&gt;选用的框架. 我又进行了一次选型. 哈哈哈,又浪费了一点时间.按原文的话我这篇博文可以再提前两天</p><p>来回顾下我都做了那些事情,导致差点又放弃写博客这件事.</p><table><thead><tr><th>动作</th><th>作对</th><th>做错</th><th>感想</th></tr></thead><tbody><tr><td>对比几个框架</td><td>简单了解快速了选一个</td><td>按文章直接来</td><td></td></tr><tr><td>了解github pages是什么</td><td>应该问AI的</td><td>原理是什么还想划出流程图</td><td>对很多技术都是,还没用起来就想研究基本原理</td></tr><tr><td>markdown的语法有哪些</td><td>用AI生成了常用的语法结构</td><td>尝试完整记忆</td><td>用到的功能去查</td></tr><tr><td>看了hexo的常用语法</td><td>无</td><td>还尝试记忆下来</td><td>用起来先</td></tr></tbody></table><h3 id="学习步骤"><a href="#学习步骤" class="headerlink" title="学习步骤"></a>学习步骤</h3><ol><li><p>问AI<br>prompt: xx的都有哪些名词概念, 组成部分和各部分的功能, 相互是如何配合工作的, 基本的工作流是什么样的. 解决了什么问题,有哪些应用场景,举例说明<br><code>如果难以理解,可以加上请通俗的解释</code></p></li><li><p>找一个实例进行实践,知道每步自己在干什么</p></li><li><p>不要进行记忆</p></li><li><p>整理思路,用自己的文字写下来或者画图. 忘记的或者不清楚查漏补缺</p></li><li><p>利用28法则. 20%的核心功能可以解决80%的问题.</p></li><li><p>查漏补缺(AI), 有哪些方面是需要考虑的去保证使用和实践时.安全,性能,稳定,保证是最佳实践</p></li></ol><h3 id="减少最短路径"><a href="#减少最短路径" class="headerlink" title="减少最短路径"></a>减少最短路径</h3><p>找一篇步骤详细的教程(不可三心二意同时打开多个), 筛选后进行实践. 不要被其他概念或者零碎的知识去打断. 进而影响自己的进度.导致迟迟无法完成</p><p>最快的达到终点. 只有做过了.回过后去看才会有更深的认识</p><h3 id="明白自己要做到什么"><a href="#明白自己要做到什么" class="headerlink" title="明白自己要做到什么"></a>明白自己要做到什么</h3><p>明确写下自己的核心目的是什么, 不可被其他细枝末节而影响. 每一步你可以想的很完美,先记录下来. 先做到可用,可以进行下一步. 后面可以回过头来排优先级逐个优化</p><h3 id="要记忆吗"><a href="#要记忆吗" class="headerlink" title="要记忆吗"></a>要记忆吗</h3><p>很多事情知道谁能做,能做到什么程度即可, 不要提前记忆. 只有经常用到的功能需要记忆. <br><br>常常实践才能加深记忆, 不用的东西记了也是增加心智负担. 把自己的精力放到更加重要地方</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>技能</tag>
+      
+      <tag>学习</tag>
+      
+      <tag>效率</tag>
+      
+      <tag>拖延症</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>开篇blog</title>
+    <link href="/2025/08/04/open-blog/"/>
+    <url>/2025/08/04/open-blog/</url>
+    
+    <content type="html"><![CDATA[<h3 id="为什么要写博客"><a href="#为什么要写博客" class="headerlink" title="为什么要写博客"></a>为什么要写博客</h3><p>主要是3月份被蔚来裁员后, 在家休息了很长一段时间.中间有了大量的时间去看,去想,去思考. 人慢了下来就会想很多. 有些想法当时感觉很牛,有些憧憬的未来又让人激动不已.<br><br>但是现在回头看看很多都已经很模糊了, 当时的想法和想要做的事也都已经淡忘了. 所以想着自己要好好的记录下来. 也是受到了两个观点的影响. <br></p><p>第一个观点: <strong>显式清单</strong> ,就是把自己的零碎的想法记录下来,在组织文字和记录的过程中让整个思考更有逻辑, 然后后续可以更清晰的梳理自己的想法<br></p><p>第二个观点: <strong>能输出知识和观点才是自己的东西</strong>. 其实长久以来不管是在工作和生活上,总是在学习新的技术和新的观点.<br><br>基本都是从网上而来的. 很多东西都是非常的零散的知识,无法形成体系.更多的时候也是一种死记硬背,很快就忘了<br><br>而且很多都是都是别人灌输的东西,像刷短视频很多东西就是无意识的进入了你的脑子,但是又很快忘记. 里面很多都是经不起推敲和思考的东西.</p><h3 id="都要记录些什么"><a href="#都要记录些什么" class="headerlink" title="都要记录些什么"></a>都要记录些什么</h3><p>我感觉主要是4个方面 </p><ul><li><strong>生活方面</strong>: 记录自己的一些感想和日常观点总结的东西. 这部分可以比较零碎和随性</li><li><strong>工作方面</strong>: 记录自己的工作中的技术问题, 工作总结,工作方法等. 这些是比较有逻辑和清晰的步骤的技术性文章和方法论</li><li><strong>投资方面</strong>: 主要是自己的股票投资, 这个非常考验自己的技术思考和分析, 以及对自己交易记录的复盘. 现状是投资手段考低价质优死守的策略. 买到了就不想放手,和存钱一样</li><li><strong>成长方面</strong>: 做事情要有长期思维, 需要培养一些好的习惯或者是考一个证书.会写一些读书笔记什么的.</li></ul><h3 id="记录原则"><a href="#记录原则" class="headerlink" title="记录原则"></a>记录原则</h3><p><strong>力求真实</strong>,这个博客应该不会有很多人看. 即时看到了应该也不会知道我是谁. 所以不管观点正确与否, 写的好坏.都是对自己真实的观点的一个记录. 可以当做日记一样的<br>不要哗众取宠, 不要彰显自己的优越感什么的. </p><p><strong>每日一记</strong>. 其实之前刚失业那会也想过拍短视频.也确实拍了两段也是雄心壮志想做到日更的. 非常开心我做到了拍摄和发布. 但是后续没有更新, 一是拍摄和剪辑非常的耗时.<br>而且当时想的是要涨粉, 立人设,吸引眼球等等. 而且毕竟还是有很多认识的亲朋好友能看到, 也不可能做到尽量的真实和随意的发表观点和看法. 毕竟很多的隐私也不能泄露太多.</p><p>如果是写blog, 我感觉应该是没有问题的, 加油!!!</p><h3 id="后续blog要用的Tags"><a href="#后续blog要用的Tags" class="headerlink" title="后续blog要用的Tags"></a>后续blog要用的Tags</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#生活 #家庭 #随笔  #观点 #社会 #随笔</span><br><span class="line">#技术 #前端 #后端 #运维 #运维开发 #技术  #工作</span><br><span class="line">#投资 #股票</span><br><span class="line">#行动力 #Todo #读书 #笔记 </span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>随笔</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2025/07/31/hello-world/"/>
+    <url>/2025/07/31/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><h2 id="first-edition"><a href="#first-edition" class="headerlink" title="first edition"></a>first edition</h2>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
